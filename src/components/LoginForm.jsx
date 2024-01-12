@@ -4,13 +4,13 @@ export const LoginForm = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [responseMessage, setResponseMessage] = useState('');
+    const [setResponseMessage] = useState('');
     
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         
         const url = import.meta.env.VITE_URL
-        const apiUrl = url + "/api/login";
+        const apiUrl = url + "/user";
 
         try {
             const response = await fetch(apiUrl, {
